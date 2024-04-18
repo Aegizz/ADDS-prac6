@@ -20,7 +20,7 @@ std::list<int> BigNumCalc::buildBigNum(std::string numString){
 std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2){
     std::list<int> res;
     int carry = 0;
-    while (!num1.empty() && !num2.empty() || carry){
+    while ((!num1.empty() && !num2.empty()) || carry){
         int temp = carry;
         if (!num1.empty()){
             temp+= num1.back();
