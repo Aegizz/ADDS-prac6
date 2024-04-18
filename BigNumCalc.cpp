@@ -38,7 +38,7 @@ std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2){
 std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2){
     std::list<int> res;
     int borrow = 0;
-    while (!num1.empty() && !num2.empty()){
+    while (!num1.empty() || !num2.empty()){
         int sub = borrow;
         if (!num1.empty()){
             sub+=num1.back();
