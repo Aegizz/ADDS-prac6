@@ -40,7 +40,7 @@ std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2){
     int borrow = 0;
     while (!num1.empty() && !num2.empty()){
         int sub = borrow;
-        if (num1.empty()){
+        if (!num1.empty()){
             sub+=num1.back();
             num1.pop_back();
         }
