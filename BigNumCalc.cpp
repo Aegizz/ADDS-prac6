@@ -66,10 +66,20 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
     int digit = num2.front();
     num2.pop_front();
 
-    std::list<int> res = num1;
+    std::list<int> power;
+    std::list<int> res;
 
-    for (int i = 1; i < digit; i++){
-        res = this->add(res, num1);
+    power.push_front(0);
+
+    while (!num1.empty()){
+        int amount = 0;
+        if (!num1.empty()){
+            amount += (num1.back() * digit);
+        }
+        res.push_front(amount % 10);
+        power.push_front(amount/10);
     }
-    return res;
+
+
+    return add(res, power);
 }
