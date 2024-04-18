@@ -68,7 +68,7 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
 
     std::list<int> res = num1;
 
-    for (int i = 1; i < digit; i++){
+    for (int i = 0; i < digit; i++){
         res = this->add(res, num1);
     }
     return res;
