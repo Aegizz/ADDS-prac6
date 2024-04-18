@@ -66,10 +66,10 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
     int digit = num2.front();
     num2.pop_front();
 
-    std::list<int> result = num1;
+    std::list<int> res = num1;
 
     for (int i = 1; i < digit; i++){
-        result = this->add(num1, num1);
+        res = this->add(res, num1);
     }
-    return result;
+    return res;
 }
