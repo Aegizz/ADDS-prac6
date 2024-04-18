@@ -2,22 +2,22 @@
 
 
 
-bigNumCalc::bigNumCalc(){
+BigNumCalc::BigNumCalc(){
 
 }
-bigNumCalc::~bigNumCalc(){
+BigNumCalc::~BigNumCalc(){
 
 }
 
 
-std::list<int> bigNumCalc::buildBigNum(std::string numString){
+std::list<int> BigNumCalc::buildBigNum(std::string numString){
     std::list<int> num;
     for (int i = 0; i < numString.length(); i++){
         num.push_back(numString[i] - '0');
     }
     return num;
 }
-std::list<int> bigNumCalc::add(std::list<int> num1, std::list<int> num2){
+std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2){
     std::list<int> res;
     int carry = 0;
     while (!num1.empty() && !num2.empty() || carry){
@@ -35,7 +35,7 @@ std::list<int> bigNumCalc::add(std::list<int> num1, std::list<int> num2){
     }
     return res;
 }
-std::list<int> bigNumCalc::sub(std::list<int> num1, std::list<int> num2){
+std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2){
     std::list<int> res;
     int borrow = 0;
     while (!num1.empty() && !num2.empty()){
@@ -62,7 +62,7 @@ std::list<int> bigNumCalc::sub(std::list<int> num1, std::list<int> num2){
     }
     return res;
 }
-std::list<int> bigNumCalc::mul(std::list<int> num1, std::list<int> num2){
+std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
     int digit = num2.front();
     num2.pop_front();
 
